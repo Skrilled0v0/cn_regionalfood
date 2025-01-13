@@ -30,7 +30,7 @@ public enum ItemsRegistry {
                             .hunger(2)
                             .saturationModifier(0.2F)
                             // 添加反胃效果，概率为20%
-                            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 200, 0), 0.2F)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 2000, 0), 0.2F)
                             .build())
             .maxCount(64)
     ));

@@ -1,6 +1,7 @@
 package com.skrilled.cnrf.registry;
 
 import com.skrilled.cnrf.CNRegionalFood;
+import com.skrilled.cnrf.block.DongbeiTableBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -20,7 +21,7 @@ import static net.minecraft.block.Blocks.register;
 
 public enum BlocksRegistry {
 
-    TEST_BLOCK("test_block", () -> new Block(FabricBlockSettings.copy(Blocks.GLASS)));
+    DONGBEI_TABLE("dongbei_table", () -> new DongbeiTableBlock(FabricBlockSettings.copy(Blocks.GLASS)));
 
     private final String name;
     private final Supplier<Block> blockSupplier;
