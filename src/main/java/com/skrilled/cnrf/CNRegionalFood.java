@@ -1,5 +1,6 @@
 package com.skrilled.cnrf;
 
+import com.skrilled.cnrf.registry.BlocksRegistry;
 import com.skrilled.cnrf.registry.ItemsRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
@@ -25,6 +26,7 @@ public class CNRegionalFood implements ModInitializer {
     @Override
     public void onInitialize() {
         ItemsRegistry.initialize();
+        BlocksRegistry.initialize();
 
         Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
                 .icon(() -> new ItemStack(ItemsRegistry.TIANJIN_JIANBING.get()))
@@ -32,5 +34,6 @@ public class CNRegionalFood implements ModInitializer {
                 .build());
 
         ItemsRegistry.registerItems();
+        BlocksRegistry.registerBlocks();
     }
 }

@@ -35,7 +35,6 @@ public enum ItemsRegistry {
             .maxCount(64)
     ));
 
-
     private final String name;
     private final Supplier<Item> itemSupplier;
     private Item item;
@@ -50,7 +49,7 @@ public enum ItemsRegistry {
     }
 
     public static void registerItems() {
-        Arrays.stream(ItemsRegistry.values()).forEach(item -> {
+        Arrays.stream(values()).forEach(item -> {
             Registry.register(Registries.ITEM, new Identifier(MOD_ID, item.name), item.get());
             ItemGroupEvents.modifyEntriesEvent(CNRegionalFood.ITEM_GROUP).register(entries -> entries.add(item.get()));
         });
