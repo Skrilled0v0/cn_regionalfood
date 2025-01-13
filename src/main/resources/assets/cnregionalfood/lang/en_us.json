@@ -1,6 +1,6 @@
 {
-  "item.cnregionalfood.test_item": "测试物品",
+  "item.cnregionalfood.test_item": "Test Item",
   "item.cnregionalfood.tianjin_jianbing": "Tianjin Pancake",
-  "item.cnregionalfood.dongbei_jiaozi": "Dongbei JiaoZi",
-  "itemGroup.cnregionalfood.test_group": "测试物品组"
+  "item.cnregionalfood.dongbei_zhuojiao": "Dongbei ZhuoJiao",
+  "itemGroup.cnregionalfood.main": "Regional Food"
 }

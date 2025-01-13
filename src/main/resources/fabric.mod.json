@@ -2,10 +2,10 @@
 	"schemaVersion": 1,
 	"id": "cnregionalfood",
 	"version": "${version}",
-	"name": "CNRegionalFood",
+	"name": "CN Regional Food",
 	"description": "This mod is not intended to be geo-discriminatory in any way!",
 	"authors": [
-		"SkrilledSense&Themoon"
+		"SkrilledSense & Themoon"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
@@ -23,11 +23,7 @@
 		]
 	},
 	"mixins": [
-		"cnregionalfood.mixins.json",
-		{
-			"config": "cnregionalfood.client.mixins.json",
-			"environment": "client"
-		}
+		"cnregionalfood.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.16.9",
