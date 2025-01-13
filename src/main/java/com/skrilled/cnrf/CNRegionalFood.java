@@ -20,5 +20,7 @@ public class CNRegionalFood implements ModInitializer {
 		// Proceed with mild caution.
 
 		LOGGER.info("Hello Fabric world!");
+		ModItems.init();
+		ModItemGroups.init();
 	}
 }

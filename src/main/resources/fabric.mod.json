@@ -3,13 +3,13 @@
 	"id": "cnregionalfood",
 	"version": "${version}",
 	"name": "CNRegionalFood",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "This mod is not intended to be geo-discriminatory in any way!",
 	"authors": [
-		"Me!"
+		"SkrilledSense&themoon"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/Skrilled0v0/cn_regionalfood"
 	},
 	"license": "CC0-1.0",
 	"icon": "assets/cnregionalfood/icon.png",
