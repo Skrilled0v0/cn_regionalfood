@@ -20,7 +20,7 @@ public enum ItemsRegistry {
 
     TIANJIN_JIANBING("tianjin_jianbing", () -> new Item(new FabricItemSettings().food(
                     new FoodComponent.Builder()
-                            .hunger(5)
+                            .hunger(6)
                             .saturationModifier(0.4F)
                             .build())
             .maxCount(64)
@@ -33,8 +33,25 @@ public enum ItemsRegistry {
                             .statusEffect(new StatusEffectInstance(StatusEffects.NAUSEA, 2000, 0), 0.2F)
                             .build())
             .maxCount(64)
-    ));
-
+    )),
+    CHEEK("cheek", () -> new Item(new FabricItemSettings().food(
+                    new FoodComponent.Builder()
+                            .hunger(1)
+                            .saturationModifier(0f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 1000, 0), 1)
+                            .build())
+            .maxCount(64)
+    )),
+    MINCED_MEAT("minced_meat", () -> new Item(new FabricItemSettings().food(
+                    new FoodComponent.Builder()
+                            .hunger(4)
+                            .saturationModifier(0.1f)
+                            .statusEffect(new StatusEffectInstance(StatusEffects.HUNGER, 1500, 1), 1)
+                            .build())
+            .maxCount(64)
+    )),
+    PLATE("plate", () -> new Item(new FabricItemSettings().maxCount(64))),
+    PLATE_OF_DONGBEIJIAOZI("plate_of_dongbeijiaozi", () -> new Item(new FabricItemSettings().maxCount(64)));
     private final String name;
     private final Supplier<Item> itemSupplier;
     private Item item;
