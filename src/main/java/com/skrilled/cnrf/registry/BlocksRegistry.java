@@ -20,7 +20,7 @@ import static net.minecraft.block.Blocks.register;
 
 public enum BlocksRegistry {
 
-    TEST_BLOCK("test_block", () -> new Block(FabricBlockSettings.create().strength(0.4F)));
+    TEST_BLOCK("test_block", () -> new Block(FabricBlockSettings.copy(Blocks.GLASS)));
 
     private final String name;
     private final Supplier<Block> blockSupplier;
@@ -39,6 +39,7 @@ public enum BlocksRegistry {
         Arrays.stream(values()).forEach(block -> {
             Registry.register(Registries.BLOCK, new Identifier(MOD_ID, block.name), block.get());
             Registry.register(Registries.ITEM, new Identifier(MOD_ID, block.name), new BlockItem(block.get(), new FabricItemSettings()));
+            ItemGroupEvents.modifyEntriesEvent(CNRegionalFood.ITEM_GROUP).register(entries -> entries.add(block.get().asItem()));
         });
     }
 
