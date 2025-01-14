@@ -18,6 +18,7 @@ import static com.skrilled.cnrf.CNRegionalFood.MOD_ID;
 
 public enum ItemsRegistry {
 
+    PLATE("plate", () -> new Item(new FabricItemSettings().maxCount(64))),
     TIANJIN_JIANBING("tianjin_jianbing", () -> new Item(new FabricItemSettings().food(
                     new FoodComponent.Builder()
                             .hunger(6)
@@ -50,8 +51,14 @@ public enum ItemsRegistry {
                             .build())
             .maxCount(64)
     )),
-    PLATE("plate", () -> new Item(new FabricItemSettings().maxCount(64))),
-    PLATE_OF_DONGBEIJIAOZI("plate_of_dongbeijiaozi", () -> new Item(new FabricItemSettings().maxCount(64)));
+    PLATE_OF_DONGBEIJIAOZI("plate_of_dongbeijiaozi", () -> new Item(new FabricItemSettings().food(
+                    new FoodComponent.Builder()
+                            .hunger(8)
+                            .saturationModifier(0.2f)
+                            .build())
+            .maxCount(1)
+    ));
+
     private final String name;
     private final Supplier<Item> itemSupplier;
     private Item item;

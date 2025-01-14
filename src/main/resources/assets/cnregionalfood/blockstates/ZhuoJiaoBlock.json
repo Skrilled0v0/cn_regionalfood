@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "bites=0": {"model": "cnregionalfood:block/zhuo_jiao_0"},
+    "bites=1": {"model": "cnregionalfood:block/zhuo_jiao_1"},
+    "bites=2": {"model": "cnregionalfood:block/zhuo_jiao_2"},
+    "bites=3": {"model": "cnregionalfood:block/zhuo_jiao_3"},
+    "bites=4": {"model": "cnregionalfood:block/zhuo_jiao_4"},
+    "bites=5": {"model": "cnregionalfood:block/zhuo_jiao_5"},
+    "bites=6": {"model": "cnregionalfood:block/zhuo_jiao_6"},
+    "bites=7": {"model": "cnregionalfood:block/zhuo_jiao_7"}
+  }
+}

@@ -2,6 +2,7 @@ package com.skrilled.cnrf;
 
 import com.skrilled.cnrf.registry.BlocksRegistry;
 import com.skrilled.cnrf.registry.ItemsRegistry;
+import com.skrilled.cnrf.registry.SoundsRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
@@ -27,6 +28,7 @@ public class CNRegionalFood implements ModInitializer {
     public void onInitialize() {
         ItemsRegistry.initialize();
         BlocksRegistry.initialize();
+        SoundsRegistry.initialize();
 
         Registry.register(Registries.ITEM_GROUP, ITEM_GROUP, FabricItemGroup.builder()
                 .icon(() -> new ItemStack(ItemsRegistry.TIANJIN_JIANBING.get()))
@@ -35,5 +37,6 @@ public class CNRegionalFood implements ModInitializer {
 
         ItemsRegistry.registerItems();
         BlocksRegistry.registerBlocks();
+        SoundsRegistry.registerSounds();
     }
 }
